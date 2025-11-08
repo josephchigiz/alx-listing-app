@@ -1,11 +1,11 @@
 import React from "react";
-import { PropertyBadgeProps } from "@/interfaces";
+import { BadgeColor, PropertyBadgeProps } from "@/interfaces";
 
 const PropertyBadge: React.FC<PropertyBadgeProps> = ({
   status,
   color = "gray",
 }) => {
-  const colorClasses: Record<string, string> = {
+  const colorClasses: Record<BadgeColor, string> = {
     blue: "bg-blue-100 text-blue-800",
     green: "bg-green-100 text-green-800",
     red: "bg-red-100 text-red-800",

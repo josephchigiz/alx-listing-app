@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import PropertyBadge from "./PropertyBadge";
 import { CardProps } from "@/interfaces";
 
 const Card: React.FC<CardProps> = ({ image, title, description, price }) => {
@@ -14,6 +15,7 @@ const Card: React.FC<CardProps> = ({ image, title, description, price }) => {
             className="object-cover"
             sizes="(max-width: 768px) 100vw, 33vw"
           />
+          <PropertyBadge status={status} color={color} />
         </div>
       )}
       <div className="p-4">

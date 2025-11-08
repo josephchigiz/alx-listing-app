@@ -2,6 +2,8 @@
  * Typescript interface for reusable components and project-wide types.
  */
 
+export type BadgeColor = "blue" | "green" | "red" | "gray";
+
 export interface CardProps {
   image?: string; // URL to property image
   title: string; // Property title
@@ -18,10 +20,10 @@ export interface ButtonProps {
 }
 
 export interface PropertyBadgeProps {
-  // status: string; // this prop would be open for any word outside of the
+  status: string; // this prop would be open for any word outside of the
   // list below
-  status: "New" | "Featured" | "Available" | "Sold!"; // These are the only
+  // status: "New" | "Featured" | "Available" | "Sold!"; // These are the only
   // strings allowed for the status of the property listing
-  color: "badge-blue" | "badge-green" | "badge-red" | "badge-gray"; // colour
+  color?: BadgeColor; // colour
   // coded statuses
 }
