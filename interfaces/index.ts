@@ -1,14 +1,19 @@
 /**
  * Typescript interface for reusable components and project-wide types.
  */
-
 export type BadgeColor = "blue" | "green" | "red" | "gray";
+
+export interface CardBadge {
+  label: string;
+  color?: BadgeColor;
+}
 
 export interface CardProps {
   image?: string; // URL to property image
   title: string; // Property title
   description: string; // short desctiption of property
   price?: number; // price per night or stay
+  badge?: CardBadge;
 }
 
 export interface ButtonProps {

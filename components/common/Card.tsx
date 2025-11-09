@@ -3,7 +3,13 @@ import Image from "next/image";
 import PropertyBadge from "./PropertyBadge";
 import { CardProps } from "@/interfaces";
 
-const Card: React.FC<CardProps> = ({ image, title, description, price }) => {
+const Card: React.FC<CardProps> = ({
+  image,
+  title,
+  description,
+  price,
+  badge,
+}) => {
   return (
     <div className="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-200">
       {image && (
@@ -15,7 +21,7 @@ const Card: React.FC<CardProps> = ({ image, title, description, price }) => {
             className="object-cover"
             sizes="(max-width: 768px) 100vw, 33vw"
           />
-          <PropertyBadge status={status} color={color} />
+          {badge && <PropertyBadge status={badge.label} color={badge.color} />}
         </div>
       )}
       <div className="p-4">
